@@ -1,0 +1,51 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#app {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.9) 22.66%,
+      rgba(0, 0, 0, 0.54) 100%
+    ),
+    url("../assets/shapes.png");
+  background-color: var(--background-primary);
+}
+
+ul[role="list"] {
+  list-style: none;
+}
+:root {
+  --margin-inline: 8.375rem;
+  --margin-top: 4.75rem;
+}
+.container {
+  width: 100%;
+  max-width: 68.625rem;
+  min-width: 19.9375rem;
+  margin-inline: var(--margin-inline);
+  margin-top: var(--margin-top);
+
+}
+
+@media (width <= 24.375em) {
+  :root {
+    --margin-inline: 2.21875rem;
+    --margin-top: 2.75rem;
+  }
+}

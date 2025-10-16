@@ -1,0 +1,45 @@
+main {
+  & .container-main {
+    margin-top: 5.5625rem;
+    & .container-header-questions {
+      & .header-text1 {
+        font: var(--overline);
+        background: linear-gradient(var(--gradient-content));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      & .header-text2 {
+        margin-top: 0.75rem;
+        position: relative;
+        display: inline-block;
+
+        & .gradient {
+          position: absolute;
+          top: 0;
+          left: 0;
+          font: var(--display-large);
+          background: linear-gradient(90deg, #66deff 0%, #7566ff 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          opacity: 0;
+          animation: fade 5s ease-in-out infinite;
+        }
+
+        & .white {
+          font: var(--display-large);
+          color: var(--content-primary);
+        }
+      }
+    }
+  }
+}
+
+@keyframes fade {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
