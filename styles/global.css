@@ -13,18 +13,21 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-#app {
-  display: flex;
-  justify-content: center;
-  width: 100vw;
-  height: 100vh;
+body {
+  background-color: var(--background-primary);
   background-image: linear-gradient(
       180deg,
       rgba(0, 0, 0, 0.9) 22.66%,
       rgba(0, 0, 0, 0.54) 100%
     ),
     url("../assets/shapes.png");
-  background-color: var(--background-primary);
+}
+
+#app {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
 }
 
 ul[role="list"] {
@@ -40,7 +43,6 @@ ul[role="list"] {
   min-width: 19.9375rem;
   margin-inline: var(--margin-inline);
   margin-top: var(--margin-top);
-
 }
 
 @media (width <= 24.375em) {

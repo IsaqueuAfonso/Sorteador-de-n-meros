@@ -22,7 +22,7 @@
         </div>
 
         <div class="container-main">
-          <div class="container-header-questions">
+          <div class="container-header-questions column-gap-36">
             <header>
               <div class="header-text1">Online - gratuito</div>
               <h1 class="header-text2">
@@ -36,9 +36,71 @@
                 >
               </h1>
             </header>
-            <section class="questions"></section>
+
+            <section class="questions column-gap-36">
+              <div class="question">
+                <img src="./assets/person-talking.svg" alt="" />
+                <div class="q-textos">
+                  <p class="q-text1">Como funciona o sorteador de números?</p>
+                  <p class="q-text2">
+                    O sorteador utiliza um algoritmo de geração aleatória para
+                    criar números dentro do intervalo especificado pelo usuário.
+                  </p>
+                </div>
+              </div>
+
+              <div class="question">
+                <img src="./assets/person-talking.svg" alt="" />
+                <div class="q-textos">
+                  <p class="q-text1">Posso escolher o intervalo dos números?</p>
+                  <p class="q-text2">
+                    Sim, você pode definir os valores mínimo e máximo para o
+                    intervalo dos números sorteados.
+                  </p>
+                </div>
+              </div>
+            </section>
           </div>
-          <form></form>
+
+          <form class="column-gap-36">
+            <div class="title-form">
+              <h2>Quero sortear:</h2>
+              <p>
+                defina o intervalo e a quantidade de números, clique em
+                "Sortear" e veja os resultados na tela. É rápido e fácil!
+              </p>
+            </div>
+
+            <div class="form column-gap-36">
+              <div class="numbers">
+                <div class="number one column-gap-36">
+                  <label for="one">números</label>
+                  <input type="number" id="one" />
+                </div>
+                <div class="number two column-gap-36">
+                  <label for="two">de</label>
+                  <input type="number" id="two" />
+                </div>
+                <div class="number three column-gap-36">
+                  <label for="three">de</label>
+                  <input type="number" id="three" />
+                </div>
+              </div>
+
+              <div class="option-toggle custom-switch">
+                <input type="checkbox" id="toggle-no-repeat" hidden />
+
+                <label for="toggle-no-repeat" class="toggle-track"></label>
+
+                <label for="toggle-no-repeat">Não repetir número</label>
+              </div>
+            </div>
+
+            <button class="button">
+                <span>Sortear</span>
+                <img src="./assets/arrow.svg" alt="" />
+            </button>
+          </form>
         </div>
       </main>
     </div>
