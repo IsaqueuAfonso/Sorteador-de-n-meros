@@ -144,48 +144,6 @@ main {
           }
         }
       }
-
-      & .button {
-        all: unset;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 0.5rem;
-        padding-block: 1rem;
-        border-radius: 0.5rem;
-        width: 100%;
-        cursor: pointer;
-        position: relative;
-        background-color: var(--background-tertiary);
-        color: var(--content-primary);
-        font: var(--label-medium);
-        &:hover {
-          background-color: var(--background-secondary);
-        }
-        &::after {
-          content: "";
-          position: absolute;
-          inset: -2px;
-          border-radius: inherit;
-          background: conic-gradient(
-            from 0deg,
-            #77c0af 0%,
-            #d1dc97 14.84%,
-            #e9a9b3 32.15%,
-            #d586e0 65.79%,
-            #91a1fa 84.58%,
-            #77c0af 100%
-          );
-          mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-          mask-composite: exclude;
-          -webkit-mask-composite: destination-out;
-          padding: 2px; /* espessura da borda */
-          animation: rotateGradient 4s linear infinite paused;
-        }
-        &:hover::after {
-          animation-play-state: running;
-        }
-      }
     }
   }
 }
@@ -197,31 +155,6 @@ main {
   }
   50% {
     opacity: 1;
-  }
-}
-
-@keyframes rotateGradient {
-  0% {
-    background: conic-gradient(
-      from 0deg,
-      #77c0af 0%,
-      #d1dc97 14.84%,
-      #e9a9b3 32.15%,
-      #d586e0 65.79%,
-      #91a1fa 84.58%,
-      #77c0af 100%
-    );
-  }
-  100% {
-    background: conic-gradient(
-      from 360deg,
-      #77c0af 0%,
-      #d1dc97 14.84%,
-      #e9a9b3 32.15%,
-      #d586e0 65.79%,
-      #91a1fa 84.58%,
-      #77c0af 100%
-    );
   }
 }
 
