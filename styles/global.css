@@ -30,7 +30,7 @@ body {
   height: 100vh;
 }
 :root {
-  --margin-inline: 8.375rem;
+  --margin-inline: clamp(2.21875rem, 6vw, 8.375rem);
   --margin-top: 4.75rem;
 }
 .container {
@@ -43,7 +43,6 @@ body {
 
 @media (width <= 24.375em) {
   :root {
-    --margin-inline: 2.21875rem;
     --margin-top: 2.75rem;
   }
 }
