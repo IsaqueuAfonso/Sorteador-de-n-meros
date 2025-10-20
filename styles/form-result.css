@@ -1,0 +1,26 @@
+.form-result {
+  width: 100%;
+  max-width: 30.125rem;
+  margin-block: 3.6875rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  text-align: center;
+  & .title {
+    & h2 {
+      font: var(--label-medium);
+      color: var(--content-primary);
+    }
+    & p {
+      font: var(--overline);
+      color: var(--content-secondary);
+    }
+  }
+  & .content-number {
+    font: var(--overline);
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--content-brand);
+  }
+}

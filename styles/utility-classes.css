@@ -3,3 +3,11 @@
   flex-direction: column;
   gap: 2.25rem;
 }
+
+.displaynone {
+  display: none;
+}
+
+.displaynone-2 {
+  display: none;
+}

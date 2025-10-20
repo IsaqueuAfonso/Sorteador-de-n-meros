@@ -8,12 +8,13 @@
   margin: 0;
   padding: 0;
   font: inherit;
-
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 body {
+  display: flex;
+  justify-content: center;
   background-color: var(--background-primary);
   background-image: linear-gradient(
       180deg,
@@ -21,13 +22,12 @@ body {
       rgba(0, 0, 0, 0.54) 100%
     ),
     url("../assets/shapes.png");
+  overflow-x: hidden;
 }
 
 #app {
   display: flex;
   justify-content: center;
-  width: 100vw;
-  height: 100vh;
 }
 :root {
   --margin-inline: clamp(2.21875rem, 6vw, 8.375rem);
@@ -45,4 +45,8 @@ body {
   :root {
     --margin-top: 2.75rem;
   }
+}
+
+@media (max-width: 54.375em) {
+
 }

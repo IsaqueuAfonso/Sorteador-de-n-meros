@@ -16,7 +16,6 @@ main {
         margin-top: 0.75rem;
         position: relative;
         display: inline-block;
-
         & .gradient {
           position: absolute;
           top: 0;
@@ -28,20 +27,17 @@ main {
           opacity: 0;
           animation: fade 5s ease-in-out infinite;
         }
-
         & .white {
           font: var(--display-large);
           color: var(--content-primary);
         }
       }
-
       & .questions {
         & .question {
           display: flex;
           align-items: flex-start;
           gap: 0.5rem;
         }
-
         & .q-textos {
           display: flex;
           flex-direction: column;
@@ -56,7 +52,6 @@ main {
         }
       }
     }
-
     & form {
       width: 100%;
       max-width: 30.125rem;
@@ -77,7 +72,6 @@ main {
 
       & .form {
         gap: 1.5rem;
-        
 
         & .option-toggle {
           display: flex;
@@ -127,9 +121,10 @@ main {
   }
 }
 
-@media (width <= 24.375em) {
+@media (width <= 26.875em) {
   main {
     & .container-main {
+      margin-bottom: 5rem;
       & .container-header-questions {
         & .header-text2 {
           & .gradient,
@@ -138,6 +133,32 @@ main {
           }
         }
       }
+      & form {
+        & .title-form {
+          & p {
+            font: var(--paragraph-medium);
+            color: var(--content-secondary);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 54.375em) {
+  main .container-main {
+    flex-direction: column;
+    margin-top: 2.875rem;
+    gap: 2.625rem;
+  }
+  main .container-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .container-header-questions {
+    .displaynone-1 {
+      display: none;
     }
   }
 }
