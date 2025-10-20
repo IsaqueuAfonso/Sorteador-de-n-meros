@@ -1,0 +1,79 @@
+.numbers {
+  display: flex;
+  gap: 0.75rem;
+  & .number {
+    gap: 0.5rem;
+
+    &:hover label,
+    &:focus-within label,
+    &.filled label {
+      color: var(--background-brand);
+    }
+
+    &:hover .input-wrapper::before,
+    &:focus-within .input-wrapper::before,
+    &.filled .input-wrapper::before {
+      opacity: 1;
+    }
+
+    & label {
+      font: var(--label-small);
+      color: var(--content-secondary);
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    .input-wrapper {
+      position: relative;
+      display: inline-block;
+      &::before {
+        content: "";
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        border-radius: 0.5rem;
+        background: linear-gradient(45deg, var(--gradient-border));
+        background-size: 400%;
+        z-index: -1;
+        filter: blur(5px);
+        opacity: 0;
+        animation: glowing 20s linear infinite;
+        transition: opacity 0.3s ease-in-out;
+      }
+      & input {
+        all: unset;
+        display: inline-block;
+        width: 5.375rem;
+        height: 3.5rem;
+        border-radius: 0.5rem;
+        position: relative;
+        background-color: var(--background-secondary);
+        font: var(--display-small);
+        color: var(--content-primary);
+        text-align: center;
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+        &[type="number"] {
+          -moz-appearance: textfield;
+        }
+      }
+    }
+  }
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}

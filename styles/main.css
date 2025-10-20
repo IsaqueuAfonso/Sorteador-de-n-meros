@@ -77,38 +77,7 @@ main {
 
       & .form {
         gap: 1.5rem;
-        & .numbers {
-          display: flex;
-          gap: 0.75rem;
-          & .number {
-            gap: 0.5rem;
-            & label {
-              font: var(--label-small);
-              color: var(--content-secondary);
-              text-transform: uppercase;
-              text-align: center;
-            }
-            & input {
-              all: unset;
-              width: 5.375rem;
-              height: 3.5rem;
-              border-radius: 0.5rem;
-              background-color: var(--background-secondary);
-
-              font: var(--display-small);
-              color: var(--content-primary);
-              text-align: center;
-              &::-webkit-outer-spin-button,
-              &::-webkit-inner-spin-button {
-                -webkit-appearance: none;
-                margin: 0;
-              }
-              &[type="number"] {
-                -moz-appearance: textfield;
-              }
-            }
-          }
-        }
+        
 
         & .option-toggle {
           display: flex;

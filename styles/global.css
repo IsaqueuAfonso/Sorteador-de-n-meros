@@ -29,10 +29,6 @@ body {
   width: 100vw;
   height: 100vh;
 }
-
-ul[role="list"] {
-  list-style: none;
-}
 :root {
   --margin-inline: 8.375rem;
   --margin-top: 4.75rem;
