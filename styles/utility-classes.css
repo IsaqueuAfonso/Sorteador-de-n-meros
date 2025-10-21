@@ -4,10 +4,17 @@
   gap: 2.25rem;
 }
 
-.displaynone {
+.none {
   display: none;
 }
 
-.displaynone-2 {
+.none-2 {
   display: none;
+}
+
+@media (width <= 26.875em) {
+  .none-2 {
+    display: flex;
+    margin-bottom: 2.75rem;
+  }
 }
