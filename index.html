@@ -64,7 +64,7 @@
           </div>
 
           <form class="column-gap-36">
-            <div class="form column-gap-36 none">
+            <div class="form column-gap-36">
               <div class="title-form">
                 <h2>Quero sortear:</h2>
                 <p>
@@ -77,21 +77,36 @@
                 <div class="number one column-gap-36">
                   <label for="one">números</label>
                   <div class="input-wrapper">
-                    <input type="number" id="one" placeholder=" " />
+                    <input
+                      type="text"
+                      inputmode="numeric"
+                      pattern="[0-9]+"
+                      id="one"
+                    />
                   </div>
                 </div>
 
                 <div class="number two column-gap-36">
                   <label for="two">de</label>
                   <div class="input-wrapper">
-                    <input type="number" id="two" placeholder=" " />
+                    <input
+                      type="text"
+                      inputmode="numeric"
+                      pattern="[0-9]+"
+                      id="two"
+                    />
                   </div>
                 </div>
 
                 <div class="number three column-gap-36">
                   <label for="three">até</label>
                   <div class="input-wrapper">
-                    <input type="number" id="three" placeholder=" " />
+                    <input
+                      type="text"
+                      inputmode="numeric"
+                      pattern="[0-9]+"
+                      id="three"
+                    />
                   </div>
                 </div>
               </div>
@@ -103,18 +118,18 @@
               </div>
             </div>
 
-            <div class="form-result column-gap-36">
+            <div class="form-result column-gap-36 none">
               <div class="title">
                 <h2>Resultado do sorteio</h2>
                 <p>1º resultado</p>
               </div>
               <div class="content-number">
-                <span>00</span>
-                <span>00</span>
+                <span class="result-1">00</span>
+                <span class="result-2">00</span>
               </div>
             </div>
 
-            <button class="button" type="button">
+            <button class="button" type="submit">
               <span>Sortear</span>
               <img src="./assets/arrow.svg" alt="Ícone de seta" />
             </button>
