@@ -16,6 +16,7 @@ form {
       & p {
         font: var(--paragraph-large);
         color: var(--content-secondary);
+        position: relative;
       }
     }
 
@@ -65,13 +66,50 @@ form {
       & p {
         font: var(--overline);
         color: var(--content-secondary);
+        position: relative;
       }
     }
-    & .content-number {
+    & #content-number {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 5rem;
       font: var(--overline);
       font-size: 3rem;
       font-weight: bold;
       color: var(--content-brand);
+
+      & .animationresult {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 6.25rem;
+        height: 6.25rem;
+        position: relative;
+        z-index: 1;
+        animation: showResult 1s 2 ease-out forwards;
+        &::after {
+          content: "";
+          position: absolute;
+          inset: 0;
+          color: var(--color-inverse);
+          border-radius: 1.75rem;
+          background-color: var(--content-brand);
+          z-index: -1;
+        }
+      }
     }
+  }
+}
+
+@keyframes showResult {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    color: var(--color-inverse);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
