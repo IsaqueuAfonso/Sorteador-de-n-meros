@@ -80,21 +80,26 @@ form {
       color: var(--content-brand);
 
       & .animationresult {
+        color: var(--content-brand);
+        --bubble-bg: var(--content-brand);
+        animation: showResult 2.5s ease-out forwards;
+
         display: inline-flex;
         align-items: center;
         justify-content: center;
+
         width: 6.25rem;
         height: 6.25rem;
+
         position: relative;
         z-index: 1;
-        animation: showResult 1s 2 ease-out forwards;
         &::after {
           content: "";
           position: absolute;
           inset: 0;
-          color: var(--color-inverse);
+          color: var(--content-brand);
           border-radius: 1.75rem;
-          background-color: var(--content-brand);
+          background-color: var(--bubble-bg);
           z-index: -1;
         }
       }
@@ -105,11 +110,23 @@ form {
 @keyframes showResult {
   0% {
     transform: rotate(0deg);
+    color: transparent;
+    --bubble-bg: var(--content-brand);
   }
-  50% {
+  40% {
     color: var(--color-inverse);
   }
-  100% {
+  50% {
     transform: rotate(360deg);
+  }
+  90% {
+    transform: rotate(720deg);
+    color: var(--color-inverse);
+    --bubble-bg: var(--content-brand);
+  }
+  100% {
+    transform: rotate(720deg);
+    color: var(--content-brand);
+    --bubble-bg: transparent;
   }
 }

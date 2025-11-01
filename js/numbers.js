@@ -107,11 +107,12 @@ function drawNumbersWithRepetition({ quantity, min, max }) {
 
 function renderResults(numbers) {
   container_result.innerHTML = "";
-  
+
   numbers.forEach((value) => {
     const span = document.createElement("span");
     span.classList.add("animationresult");
     span.textContent = value;
+
     container_result.appendChild(span);
   });
 }
