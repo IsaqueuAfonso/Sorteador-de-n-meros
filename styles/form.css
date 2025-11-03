@@ -82,7 +82,6 @@ form {
       & .animationresult {
         color: var(--content-brand);
         --bubble-bg: var(--content-brand);
-        animation: showResult 2.5s ease-out forwards;
 
         display: inline-flex;
         align-items: center;
@@ -102,6 +101,10 @@ form {
           background-color: var(--bubble-bg);
           z-index: -1;
         }
+      }
+
+      & .animationresult.animate {
+        animation: showResult 2.5s ease-out forwards;
       }
     }
   }

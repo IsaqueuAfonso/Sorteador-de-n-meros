@@ -32,10 +32,13 @@ function setButtonIcon(icon) {
 
   img.src = iconMap[icon] ?? iconMap.arrow;
 }
-function showFormPanel() {
+function showFormPanel({ keepButtonHidden = false } = {}) {
   formPanel.classList.remove("none");
   resultPanel.classList.add("none");
   setButtonIcon("arrow");
+  if (!keepButtonHidden) {
+    button.classList.remove("hidden");
+  }
 }
 function showResultPanel() {
   formPanel.classList.add("none");
@@ -107,14 +110,34 @@ function drawNumbersWithRepetition({ quantity, min, max }) {
 
 function renderResults(numbers) {
   container_result.innerHTML = "";
+  button.classList.add("hidden");
 
-  numbers.forEach((value) => {
+  const queue = numbers.map((value) => {
     const span = document.createElement("span");
-    span.classList.add("animationresult");
+    span.className = "animationresult";
     span.textContent = value;
-
-    container_result.appendChild(span);
+    span.style.visibility = "hidden";
+    return span;
   });
+
+  const playNext = () => {
+    if (queue.length === 0) {
+      button.classList.remove("hidden");
+      return;
+    }
+
+    const span = queue.shift();
+    container_result.appendChild(span);
+
+    requestAnimationFrame(() => {
+      span.style.visibility = "visible";
+      span.classList.add("animate");
+    });
+
+    span.addEventListener("animationend", playNext, { once: true });
+  };
+
+  playNext();
 }
 
 // Fluxo de envio do formulário

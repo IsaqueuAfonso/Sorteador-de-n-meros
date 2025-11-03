@@ -12,6 +12,11 @@
   display: none;
 }
 
+.button.hidden {
+  display: none;
+  opacity: 0;
+}
+
 @media (width <= 26.875em) {
   .none-2 {
     display: flex;
