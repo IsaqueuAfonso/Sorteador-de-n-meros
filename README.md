@@ -2,6 +2,11 @@
 
 Aplicação web responsiva que gera números aleatórios a partir de um intervalo definido pelo usuário. O projeto combina HTML, CSS moderno (com variáveis, gradientes e animações) e JavaScript puro para oferecer uma experiência fluida tanto em desktop quanto em dispositivos móveis.
 
+## Capturas de tela
+
+![Tela principal do sorteador](./Projeto.png)
+![Tela com resultados em sequência](./Projeto%20(1).png)
+
 ## Funcionalidades
 
 - Definição de quantidade, valor mínimo e máximo com validação em tempo real que só aceita inteiros positivos.
