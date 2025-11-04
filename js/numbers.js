@@ -123,6 +123,7 @@ function renderResults(numbers) {
   const playNext = () => {
     if (queue.length === 0) {
       button.classList.remove("hidden");
+      alert("Sorteio finalizado");
       return;
     }
 
